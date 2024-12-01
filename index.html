@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form || Contact Management System</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function validateLogin(event) {
+        event.preventDefault(); // Prevent form submission
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+  
+        // Set expected credentials
+        const correctUsername = "group10";
+        const correctPassword = "12345678910";
+  
+        if (username === correctUsername && password === correctPassword) {
+          alert("Login successful!");
+          // Redirect or perform further actions here
+        } else {
+          alert("Invalid username or password. Please try again.");
+        }
+      }
+    </script>
+    
+  </head>
+  <body>
+    <form action="#" class="login-form">
+      <h1 class="login-title">CONTACT MANAGEMENT Login</h1>
+
+      <div class="input-box">
+        <i class="bx bxs-user"></i>
+        <input type="text" placeholder="Username" />
+      </div>
+      <div class="input-box">
+        <i class="bx bxs-lock-alt"></i>
+        <input type="password" placeholder="Password" />
+      </div>
+
+      <div class="remember-forgot-box">
+        <label for="remember">
+          <input type="checkbox" id="remember" />
+          Remember
+        </label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button class="login-btn">Login</button>
+
+      <p class="register">
+        Don't have an account?
+        <a href="#">Register</a>
+        <p>
+          POWERED BY GROUP10
+        </p>
+      </p>
+    </form>
+  </body>
+</html>
